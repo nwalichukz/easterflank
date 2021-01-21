@@ -208,7 +208,7 @@
                                      style="height:230px; max-width:250px;">
                                 </figure>
                                 <div class="kf_blog_text">
-                                    <h6><a href="{{ url($latest->id.'/'.str_slug(strtolower($bpost->title), '-')) }}">
+                                    <h6><a href="{{ url($bpost->id.'/'.str_slug(strtolower($bpost->title), '-')) }}">
                                       {{$Helper->get_title(title_case(strtolower($bpost->title)), 20)}}</a></h6>
                                     	
                                 </div>
