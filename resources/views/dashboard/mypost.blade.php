@@ -188,7 +188,8 @@
 
                                             <div>
                                                 <div class="mb-1">
-                                                    <div class="mb-2 text-blue capitalize">{{$Helper->commenter($comment->user_id)->user_name}}</div>
+                                                    <div class="mb-2 text-blue capitalize">@if(!empty($Helper->commenter($comment->user_id)->user_name))
+                                                    {{$Helper->commenter($comment->user_id)->user_name}} @endif </div>
 
                                                     <p>{{ucfirst($comment->comment)}}</p>
                                                 </div>

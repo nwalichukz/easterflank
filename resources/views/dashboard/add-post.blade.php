@@ -15,8 +15,8 @@
                     <textarea name="post" rows="3" id="textPost" class="modal-input" placeholder="Share your thought on anything you care about" required></textarea>
                 </div>
                 
-                     <div class="mb-3" style="width:100%;">
-                    <select name="category" class="modal-select" required>
+                     <div class="mb-5" style="width:100%;">
+                    <select name="category" class="modal-select" style="width:100%;" required>
                         <option value="">Select Category</option>
                         @if(!empty($Helper->category()))
 									@foreach($Helper->category() as $cat)
@@ -29,8 +29,8 @@
                     </select>
                 </div>
                 @if(Auth::check() && Auth::user()->user_level === 'admin')
-                    <div class="mb-3">
-                        <select name="post_importance" class="modal-select" required>
+                    <div class="mb-12">
+                        <select name="post_importance" class="modal-select" style="width:100%;" required>
                            <option value="latest" >Normal</option>
                             <option value="lead" >Lead story</option>
                             <option value ="side-lead">Side Lead</option>
@@ -42,6 +42,7 @@
                         Fill this if the publishing is for a guest writer
                         <input type="text" name="guest_name" class="modal-input" placeholder="Enter guest writer's name (optional)">
                     </div>
+                    
                     <div class="mb-3">
                     <textarea name="guest_description" rows="3" id="" class="modal-input" placeholder="Enter the description of the guest (optional)"></textarea>
                 </div>
